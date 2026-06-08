@@ -1,4 +1,5 @@
-//--------------------------------------------------
+//==========================================================================================
+// Copiar el ejercicio 1 debajo del comentario "{ EJERCICIO 1 COPIAR ABAJO }"
 //EJERCICIO 1
 function SumaProductos(n: Integer): real;
 var
@@ -61,5 +62,22 @@ begin
   Result := sum;
 end;
 
+
+
+
+
+
+
+
+//==========================================================================================
+// Copiar la llamada del ejercicio 1 debajo del comentario "{ EJERCICIO 1 COPIAR ABAJO }"
 //LLAMADA
  Edit3.Text := floattoStr(SumaProductos2(n));
+
+
+
+
+
+
+
+ 
