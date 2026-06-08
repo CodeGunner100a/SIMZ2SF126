@@ -1,3 +1,5 @@
+//==========================================================================================
+// Copiar el ejercicio 2 debajo del comentario "{ EJERCICIO 2 COPIAR ABAJO }"
 //EJERCICIO 2
 function InsertarDigitoEnPosicion(n: Integer; pos: Integer;
   digito: Integer): Integer;
@@ -18,7 +20,11 @@ begin
   InsertarDigitoEnPosicion := resultado;
 end;
 
-//LLAMADA
+
+
+//==========================================================================================
+// Copiar la llamada del ejercicio 2 debajo del comentario "{ EJERCICIO 2 COPIAR ABAJO }"
+//LLAMADA DEL EJERCICIO 2
 
   Edit3.Text := IntToStr(InsertarDigitoEnPosicion(n, StrToInt(Edit2.Text),
     StrToInt(Edit3.Text)));
