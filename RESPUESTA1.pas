@@ -71,7 +71,8 @@ end;
 
 //==========================================================================================
 // Copiar la llamada del ejercicio 1 debajo del comentario "{ EJERCICIO 1 COPIAR ABAJO }"
-//LLAMADA
+
+//LLAMADA DEL EJERCICIO 1
  Edit3.Text := floattoStr(SumaProductos2(n));
 
 
