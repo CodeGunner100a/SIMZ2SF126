@@ -44,6 +44,8 @@ begin
       pot := pot * 10;
     end;
   end;
+
+  Result := res;
 end;
 
  
