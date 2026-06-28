@@ -1,85 +1,60 @@
 //==========================================================================================
-//CODEGUNNER CLICK
+//===== ESTO SOLO ES UN SIMULACRO PARA EL EXAMEN SERA OTRO REPOSITORIO EN OTRA CUENTA ======
+//==========================================================================================
+
 // Copiar el ejercicio 1 debajo del comentario "{ EJERCICIO 1 COPIAR ABAJO }"
+
+
 //EJERCICIO 1
-function SumaProductos(n: Integer): real;
+function Ejercicio1_numeros(n: Integer): Integer;
 var
-  i: Integer;
-  resultado, termino1, termino2: real;
+  dig, temp, res, pot, j: Integer;
+  sw: Boolean;
 begin
-  resultado := 0.0;
-  termino1 := 1.0;
-
-  for i := 1 to n do
+  temp := 0;
+  pot := 1;
+  while n > 0 do
   begin
-
-    termino2 := termino1 + 2.0;
-
-    resultado := resultado + (termino1 * termino2);
-
-    termino1 := termino2;
+    dig := n mod 10;
+    n := n div 10;
+    temp := temp + dig * pot;
+    pot := pot * 10;
   end;
 
-  SumaProductos := resultado;
-end;
+  res := 0;
+  pot := 1;
 
-function CalcularFactorial(n: Integer): Integer;
-var
-  resultado, i: Integer;
-begin
-  resultado := 1;
-
-  for i := 2 to n do
+  while temp > 0 do
   begin
-    resultado := resultado * i;
+    dig := temp mod 10;
+    temp := temp div 10;
+
+    sw := False;
+    j := res;
+    while j > 0 do
+    begin
+      if (j mod 10) = dig then
+        sw := True;
+      j := j div 10;
+    end;
+
+    if not sw then
+    begin
+      res := res + dig * pot;
+      pot := pot * 10;
+    end;
   end;
 
-  Result := resultado;
-end;
 
-function SumaProductos2(n: Integer): real;
-var
-  suma, x, d, t, sum: real;
-  serie, a: Integer;
-begin
-  c := 0;
-  serie := 3;
-  x := 0;
-  a := 1;
-  sum := 0;
-  while n > c do
-  begin
-
-    x := a * serie;
-    d := CalcularFactorial(a);
-    t := x / d;
-    serie := serie + 2;
-    sum := sum + t;
-    c := c + 1;
-    a := a + 2;
-
-  end;
-
-  Result := sum;
-end;
-
-
-
-
-
-
-
-
+ 
 //==========================================================================================
 // Copiar la llamada del ejercicio 1 debajo del comentario "{ EJERCICIO 1 COPIAR ABAJO }"
 
 //LLAMADA DEL EJERCICIO 1
- Edit3.Text := floattoStr(SumaProductos2(n));
+Edit3.Text := FloatToStr(Ejercicio1_numeros(n));
 
 
 
 
 
 
-
- 
