@@ -1,4 +1,5 @@
 //==========================================================================================
+//CODEGUNNER
 // Copiar el ejercicio 1 debajo del comentario "{ EJERCICIO 1 COPIAR ABAJO }"
 //EJERCICIO 1
 function SumaProductos(n: Integer): real;
