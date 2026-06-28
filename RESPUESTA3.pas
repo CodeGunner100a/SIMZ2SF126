@@ -1,56 +1,34 @@
-//EJERCICIO 3
+//============================== UCNatural ==============================
 
+// COPIAR AQUI LA CABECERA
+function DistanciaNumerica: Integer;
 
-function InvertirPalabra(palabra: string): string;
+    
+// COPIAR AQUI EL EJERCICIO POO
+function NumeroNatural.DistanciaNumerica: Integer;
 var
-  i: Integer;
-  invertida: string;
+  a, b, n, suma: Integer;
 begin
-  invertida := '';
-  for i := length(palabra) downto 1 do
-    invertida := invertida + palabra[i];
-  InvertirPalabra := invertida;
-end;
+  n := Valor;
+  suma := 0;
+  b := n mod 10;
+  n := n div 10;
 
-function InvertirSegundaPalabraEnCadena(cad: string): string;
-var
-  i, palabraIndex, inicio, fin: Integer;
-  palabra, resultado: string;
-begin
-  palabraIndex := 0;
-  inicio := 0;
-  fin := 0;
-  resultado := '';
-  i := 1;
-
-  while i <= length(cad) do
+  while n > 0 do
   begin
-    if (cad[i] = ' ') or (i = length(cad)) then
-    begin
-      if i = length(cad) then
-        fin := i
-      else
-        fin := i - 1;
-
-      Inc(palabraIndex);
-
-      if palabraIndex = 2 then
-        palabra := InvertirPalabra(Copy(cad, inicio, fin - inicio + 1))
-      else
-        palabra := Copy(cad, inicio, fin - inicio + 1);
-
-      if resultado = '' then
-        resultado := palabra
-      else
-        resultado := resultado + ' ' + palabra;
-
-      inicio := i + 1;
-    end;
-    Inc(i);
+    a := n mod 10;
+    n := n div 10;
+    if a > b then
+      suma := suma + (a - b)
+    else
+      suma := suma + (b - a);
+    b := a;
   end;
 
-  Result := resultado;
+  Result := suma;
 end;
 
-//LLAMADA
-Edit3.Text := InvertirSegundaPalabraEnCadena(cad);
+//============================== UFNatural ==============================
+// COPIAR AQUI LA LLAMADA
+
+Edit2.Text := IntToStr(Numero.DistanciaNumerica);
